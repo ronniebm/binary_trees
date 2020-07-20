@@ -15,12 +15,12 @@ void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 	if (!tree || !func)
 		return;
 
-	/* printing value of head node. */
+	/* STEP 1. printing value of node. */
 	printf("%d\n", tree->n);
 
-	/* recursion on left subtree. */
+	/* STEP 2. recursion on left subtree. */
 	binary_tree_preorder(tree->left, func);
 
-	/* recursion on right subtree. */
+	/* STEP 3. recursion on right subtree. */
 	binary_tree_preorder(tree->right, func);
 }
