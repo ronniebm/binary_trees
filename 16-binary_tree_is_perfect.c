@@ -46,15 +46,16 @@ int perfect_tree(const binary_tree_t *tree, int val, int level)
 	/* Check if it's a leaf node. */
 	if (!tree->left && !tree->right)
 	{
+		/*then, it's depth must be same as 'val' */
 		if (val == level + 1)
 			return (1);
 	}
 
-	/* Check if left-right are not NULL, and if subtrees are full. */
+	/* Check if node has one child missing */
 	if (!tree->left || !tree->right)
 		return (0);
 
-	/* Output if it's not a full tree. */
+	/* Check if the given tree is perfect */
 	if ((perfect_tree(tree->left, val, level + 1) == 1) &&
 		(perfect_tree(tree->right, val, level + 1) == 1))
 		result = 1;
