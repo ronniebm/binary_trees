@@ -30,7 +30,8 @@ int height_of(const binary_tree_t *node)
 }
 
 /**
- * binary_tree_height - measures the height of a binary tree.
+ * binary_tree_height - measures the height of a node in a
+ * binary tree.
  * ----------------------------------------------------------
  * @tree: a pointer to the root node of the tree to measure
  * the height.
