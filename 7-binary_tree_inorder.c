@@ -18,8 +18,8 @@ void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int))
 	/* STEP 1. recursion on left subtree. */
 	binary_tree_inorder(tree->left, func);
 
-	/* STEP 2. printing value of node. */
-	printf("%d\n", tree->n);
+	/* STEP 2. using node value */
+	func(tree->n);
 
 	/* STEP 3. recursion on right subtree. */
 	binary_tree_inorder(tree->right, func);
