@@ -28,8 +28,14 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 		(a && a->right && (node->n != a->right->n)))
 		return (a);
 
+	else if (a && !a->left && !a->right)
+		return (a);
+
 	else if ((b && b->left && (node->n != b->left->n)) &&
 			 (b && b->right && (node->n != b->right->n)))
+		return (b);
+
+	else if (b && !b->left && !b->right)
 		return (b);
 
 	else
