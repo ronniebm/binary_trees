@@ -16,9 +16,12 @@ binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 	binary_tree_t *new_node = NULL;
 	binary_tree_t *temp = NULL;
 
+	if (!parent)
+		return (NULL);
+
 	new_node = calloc(sizeof(binary_tree_t), 1);
 
-	if (!parent || !new_node)
+	if (!new_node)
 		return (NULL);
 
 	if (parent->right)
