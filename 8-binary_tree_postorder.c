@@ -21,6 +21,6 @@ void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int))
 	/* STEP 2. recursion on right subtree. */
 	binary_tree_postorder(tree->right, func);
 
-	/* STEP 3. printing value of node. */
-	printf("%d\n", tree->n);
+	/* STEP 3. using node value */
+	func(tree->n);
 }
